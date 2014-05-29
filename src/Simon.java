@@ -220,10 +220,10 @@ public class Simon{
 			int y = (dim.height-h)/2;
 	        _start.setSize(25, 25);
 	        _start.setLocation(316, 288);
-	        _start.setBackground(new Color(1f,1f,1f,0f));
-	        _start.setBorderPainted(false);
-	        _start.setOpaque(false);
-	        _start.setContentAreaFilled(false);
+	        _start.setBackground(new Color(1f,1f,1f,1f));
+	        _start.setBorderPainted(true);
+	        _start.setOpaque(true);
+	        _start.setContentAreaFilled(true);
 	        
 	        _b1.setLocation(150,95);
 	        _b1.setSize(80, 80);
@@ -274,7 +274,7 @@ public class Simon{
 
     class FrameError {
     	public FrameError() throws IOException{
-    			JFrame fram = new JFrame("Error ...");
+    			JFrame fram = new JFrame("Error");
     		    JLabel label = new JLabel();       
         		label.setIcon(new ImageIcon(ImageIO.read(new File("photos/bad.jpeg"))));
 				Dimension dim=Toolkit.getDefaultToolkit().getScreenSize(); 
@@ -284,14 +284,14 @@ public class Simon{
 				int y = (dim.height-h)/2;
 				fram.add(label);
 		 		fram.setLocation(x, y);
-		 		fram.setSize(250, 230);
+		 		fram.setSize(225, 225);
 				fram.setResizable(false);
 		 		fram.setVisible(true);
     	}
     }
     class FrameGood {
     	public FrameGood() throws IOException{
-    			JFrame fram = new JFrame("Good ...");
+    			JFrame fram = new JFrame("Good");
     		    JLabel label = new JLabel();  
         		label.setIcon(new ImageIcon(ImageIO.read(new File("photos/good.jpeg"))));
 				Dimension dim=Toolkit.getDefaultToolkit().getScreenSize(); 
@@ -301,7 +301,7 @@ public class Simon{
 				int y = (dim.height-h)/2;
 				fram.add(label);
 		 		fram.setLocation(x, y);
-		 		fram.setSize(300, 300);
+		 		fram.setSize(200, 200);
 				fram.setResizable(false);
 		 		fram.setVisible(true);
     	}
